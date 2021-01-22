@@ -1,1 +1,44 @@
+header {
+  width: 100%;
+  height: 80px;
+  background-color: black;
+}
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: darkslategray;
+}
+
+.wrapper {
+  width: 60%;
+  height: 100%;
+  margin: auto;
+}
+
+.album_container {
+  text-align: center;
+  height: 350px;
+  width: 25%;
+  padding: 20px;
+  background-color: white;
+}
+.album_container img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.album_container h3 {
+  margin: 10px 0;
+}
+
+main .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-height: calc(100vh - 80px);
+  padding: 60px 0;
+}
