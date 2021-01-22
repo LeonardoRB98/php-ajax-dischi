@@ -1,3 +1,6 @@
+<?php include 'db.php'; ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,20 +17,16 @@
     </header>
     <main> 
         <div class="wrapper">
+            <?php foreach ($albums as $album) { ?>
             <div class="album_container">
                 <div class="thumbnail_container">
-                    <img src="img/linkin-park.jpg" alt="">
+                    <img src=<?php echo $album[poster]; ?> alt="poster">
                 </div>
-                <h2>Castel of Glass</h2>
-                <h3>Linkin Park</h3>
-                <h4>2012</h4>
+                <h2><?php echo $album[title]; ?></h2>
+                <h3><?php echo $album[author]; ?></h3>
+                <h4><?php echo $album[year]; ?></h4>
             </div>
-            <div class="album_container">
-                
-            </div>
-            <div class="album_container">
-                
-            </div>
+            <?php } ?>
         </div>
     </main>
 </body>
