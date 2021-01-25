@@ -1851,15 +1851,21 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js").de
 var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
   el: '#app',
   data: {
-    albums: []
+    albums: [],
+    genres: []
   },
   mounted: function mounted() {
     self = this;
     axios.get('db.php').then(function (response) {
       self.albums = response.data;
       console.log(response.data);
+      self.albums.forEach(function (element) {
+        self.genres.push(element.genre);
+      });
+      console.log(self.genres);
     });
-  }
+  },
+  updated: function updated() {}
 });
 
 /***/ }),

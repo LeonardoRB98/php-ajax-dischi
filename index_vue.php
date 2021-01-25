@@ -18,6 +18,14 @@
 
         <!-- main -->
         <main>
+        <form action="db.php" method="get">
+            <select name="genre">
+                <option value="all">All</option>
+                <option :value="genre" v-for="genre in genres"> {{ genre }} </option>
+                <option value="jazz">Jazz</option>
+            </select>
+        </form>
+        
             <div class="wrapper">
                 <div class="album_container" v-for="album in albums">
                     <div class="thumbnail_container">

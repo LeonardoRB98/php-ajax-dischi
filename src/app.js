@@ -5,7 +5,8 @@ var app = new Vue (
     {
         el: '#app',
         data: {
-            albums: []
+            albums: [],
+            genres: []
         },
         mounted: function() {
             self = this;
@@ -13,7 +14,15 @@ var app = new Vue (
             .then(function(response){
                 self.albums = response.data;
                 console.log(response.data);
+                self.albums.forEach((element) => {
+                    self.genres.push(element.genre);
+                });
+                console.log(self.genres);
             });
+        },
+        updated: function () {
+            
+           
         }
     }
 );
