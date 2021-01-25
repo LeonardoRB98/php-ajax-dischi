@@ -21,7 +21,7 @@
             <div class="wrapper">
                 <div class="album_container" v-for="album in albums">
                     <div class="thumbnail_container">
-                        <img :src="album.poster" alt="">
+                        <img :src="album.poster" :alt="album.title + ' album image'">
                     </div>
                     <h2>{{ album.title }}</h2>
                     <h3>{{ album.author }}</h3>

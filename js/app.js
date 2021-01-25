@@ -1855,9 +1855,9 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
   },
   mounted: function mounted() {
     self = this;
-    axios.get('https://flynn.boolean.careers/exercises/api/array/music').then(function (response) {
-      self.albums = response.data.response;
-      console.log(self.albums);
+    axios.get('db.php').then(function (response) {
+      self.albums = response.data;
+      console.log(response.data);
     });
   }
 });
