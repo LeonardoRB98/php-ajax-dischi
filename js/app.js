@@ -1851,11 +1851,13 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js").de
 var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
   el: '#app',
   data: {
-    prova: 'ciao'
+    albums: []
   },
   mounted: function mounted() {
+    self = this;
     axios.get('https://flynn.boolean.careers/exercises/api/array/music').then(function (response) {
-      console.log(response.data.response);
+      self.albums = response.data.response;
+      console.log(self.albums);
     });
   }
 });

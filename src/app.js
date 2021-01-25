@@ -5,12 +5,14 @@ var app = new Vue (
     {
         el: '#app',
         data: {
-            prova: 'ciao'
+            albums: []
         },
         mounted: function() {
+            self = this;
             axios.get('https://flynn.boolean.careers/exercises/api/array/music')
             .then(function(response){
-                console.log(response.data.response);
+                self.albums = response.data.response;
+                console.log(self.albums);
             });
         }
     }

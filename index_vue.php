@@ -19,13 +19,13 @@
         <!-- main -->
         <main>
             <div class="wrapper">
-                <div class="album_container">
+                <div class="album_container" v-for="album in albums">
                     <div class="thumbnail_container">
-                        <img src="img/linkin-park.jpg" alt="">
+                        <img :src="album.poster" alt="">
                     </div>
-                    <h2>titolo canzone</h2>
-                    <h3>autore</h3>
-                    <h4>anno pubblicazione</h4>
+                    <h2>{{ album.title }}</h2>
+                    <h3>{{ album.author }}</h3>
+                    <h4>{{ album.year }}</h4>
                 </div>
             </div>
         </main>
